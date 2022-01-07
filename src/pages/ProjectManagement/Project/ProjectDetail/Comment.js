@@ -84,8 +84,8 @@ export default function Comment() {
                 <div className="input-comment form-group ml-2">
                     <div onClick={() => { setState(true) }}>
                         <input
-                            className="form-control mb-2 cursor-pointer"
-                            type="text"
+                            className="form-control mb-2 "
+                            type="search"
                             placeholder="Add a comment ..."
                             onChange={e => {
                                 setComment({ newComment: e.target.value })

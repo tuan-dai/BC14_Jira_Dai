@@ -31,7 +31,7 @@ export default function UserManagement() {
         </Fragment>
       ),
       width: '6rem',
-      responsive: ['sm']
+      responsive: ['lg']
     },
     {
       title: "Email",
@@ -123,7 +123,7 @@ export default function UserManagement() {
   const onSearch = (value) => dispatch(searchUser(value))
 
   return (
-    <div className="user w-full p-5">
+    <div className="user container-fluid p-5 md:ml-14 lg:ml-80">
       {loading ? <Loading /> : ''}
       <div className="flex items-center gap-3 mb-4">
         <UserOutlined className="text-xl" />

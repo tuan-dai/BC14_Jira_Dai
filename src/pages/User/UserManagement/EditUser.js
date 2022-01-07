@@ -33,23 +33,22 @@ export default function EditUser(props) {
 
   const { handleChange, handleSubmit, values } = formik;
 
-  const layout = {
-    labelCol: {
-      xs: { span: 24 }, sm: { span: 14 }, md: { span: 8 }, lg: { span: 8 }
-    },
-    wrapperCol: {
-      xs: { span: 24 }, sm: { span: 14 }, md: { span: 8 }, lg: { span: 8 }
-    },
-  };
+
   return (
-    <div className="edit-user p-5 w-full">
+    <div className="edit-user p-5 container-fluid md:ml-14 lg:ml-80">
       <div className="flex items-center gap-3 mb-4">
         <EditFilled className="text-xl" />
         <span className="text-3xl font-medium">Edit User</span>
       </div>
-      <div className="form__edituser md:-ml-48">
+      <div className="form__editUser lg:-ml-24 xl:ml-0">
         <Form
-          {...layout}
+          labelCol={{
+            span: 4,
+          }}
+          wrapperCol={{
+            span: 14,
+          }}
+          layout="horizontal"
           onSubmitCapture={handleSubmit}
           initialValues={{ size: componentSize }}
           onValuesChange={onFormLayoutChange}

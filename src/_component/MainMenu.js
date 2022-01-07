@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 export default function MainMenu() {
   return (
-    <div style={{ marginLeft: '4.7rem', width: '17rem' }} className="menu md:w-64 bg-gray-100 z-50">
+    <div className="menu md:w-64 bg-gray-100 px-2">
 
       {/* ACOUNT */}
       <div className="flex items-center gap-2 pl-3 py-4 mb-2">

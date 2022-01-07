@@ -20,7 +20,7 @@ export default function ProjectDetail(props) {
     const { loading } = useSelector(state => state.getProjectDetail_Reducer)
 
     return (
-        <div className="projectDetail w-full p-5">
+        <div className="projectDetail p-5 container-fluid md:ml-14 lg:ml-80">
             {loading ? <Loading /> : ''}
             <div className="flex items-center gap-3 mb-4">
                 <ProfileOutlined className="text-xl" />

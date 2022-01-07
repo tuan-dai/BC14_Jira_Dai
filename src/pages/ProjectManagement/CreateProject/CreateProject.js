@@ -51,7 +51,7 @@ export default function CreateProject(props) {
   };
 
   return (
-    <div className="create-project w-full p-5">
+    <div className="create-project container-fluid p-5 md:ml-14 lg:ml-80">
       <div className="flex items-center gap-3 mb-4">
         <EditFilled className="text-xl" />
         <span className="text-3xl font-medium">Create Project</span>

@@ -42,7 +42,7 @@ export default function EditProject(props) {
   const { handleChange, handleSubmit, setFieldValue, values } = formik;
 
   return (
-    <div className="edit-project p-5 w-full">
+    <div className="edit-project p-5 container-fluid md:ml-80">
       <div className="flex items-center gap-3 mb-4">
         <EditFilled className="text-xl" />
         <span className="text-3xl font-medium">Edit Project</span>

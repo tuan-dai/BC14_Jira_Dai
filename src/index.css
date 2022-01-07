@@ -10,7 +10,7 @@ html body {
   scroll-behavior: smooth;
 }
 
-/* SIDEBAR - MENU CSS */
+/* JIRA */
 .jira {
   height: 100vh;
   font-weight: 300;
@@ -19,7 +19,7 @@ html body {
 
 /* Sider Bar */
 .sideBar {
-  z-index: 100;
+    z-index: 100;
     position: fixed;
     top: 0px;
     left: 0px;
@@ -36,19 +36,23 @@ html body {
 }
 .sideBar:hover .sideBar-icon .title {
   opacity: 1;
-  font-size: 14px;
+  font-size: 14px !important;
 }
 
 .sideBar .sideBar-icon .title {
   opacity: 0;
   font-size: 8px;
+  overflow: hidden;
 }
 
+/* MENU */
+.menu {
+  height: 100vh !important;
+  z-index: 90;
+  position: fixed;
+  left: 4.6rem;
 
-/* .menu {
-  height: 100% !important;
-} */
-
+}
 /* .menu .account {
   display: flex;
   padding: 5% 15%;
@@ -130,7 +134,7 @@ html body {
 } */
 
 .main {
-  padding-left: 2%;
+  padding-left: 3%;
   padding-top: 1%;
 }
 .main .header .breadcrumb {
@@ -436,18 +440,7 @@ html body {
   }
 }
 
-/* PROJECT */
-@media screen and (max-width: 1000px) {
-  .project, .user, .edit-user, .create-project, .edit-project, .create-task, .projectDetail {
-    margin-left: 7%;
-  }
-
-}
-@media screen and (min-width: 1000px) {
-  .form__edituser{
-    margin-left: -32rem !important;
-  }
-}
+/* PROJECT - USER - TASK - SIGN IN - SIGN UPV */
 
 @media screen and (max-width: 500px) {
   .project, .user, .edit-user, .create-project, .edit-project, .create-task, .projectDetail {
@@ -462,7 +455,7 @@ html body {
     transform: translatey(-50%);
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) and (min-width: 1024px) {
   .photo-signin {
     display: none !important;
   }
@@ -471,7 +464,6 @@ html body {
     top: 50%;
     transform: translatey(-50%);
   }
-  
 }
 
 

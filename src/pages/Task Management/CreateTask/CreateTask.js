@@ -96,7 +96,7 @@ export default function CreateTask(props) {
     const { handleSubmit, handleChange, setFieldValue, errors, touched } = formik
 
     return (
-        <div className="create-task w-full max-h-screen p-5">
+        <div className="create-task max-h-screen p-5 container-fluid md:ml-14 lg:ml-80">
             <div className='flex items-center gap-3 mb-4'>
                 <OrderedListOutlined className='text-xl' />
                 <span className="text-3xl font-medium">Create Task</span>
