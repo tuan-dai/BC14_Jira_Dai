@@ -7,7 +7,7 @@ import { useFormik } from "formik";
 import { getProjectCatagory } from "../../../redux/actions/getProjectCatagory";
 import { getProjectDetail } from '../../../redux/actions/getProjectDetail'
 import { EditFilled } from "@ant-design/icons/lib/icons";
-import { NavLink } from "react-router-dom/cjs/react-router-dom.min";
+import { NavLink } from "react-router-dom";
 
 export default function EditProject(props) {
   const { id } = props.match.params;

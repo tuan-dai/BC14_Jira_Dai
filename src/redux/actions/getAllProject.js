@@ -70,15 +70,6 @@ export const deleteProject = (id) => {
   };
 };
 
-//SEARCH PROJECT
-export const searchProject = (keyword) => {
-  return (dispatch) => {
-    api
-      .get(`Project/getAllProject?keyword=${keyword}`)
-      .then(result => dispatch(actSearchProject(result.data.content)))
-      .catch(error => console.log(error))
-  }
-}
 
 // REMOVE USER FROM PROJECT
 export const removeUserFromProject = (project) => {

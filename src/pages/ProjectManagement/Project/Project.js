@@ -5,7 +5,6 @@ import {
   deleteProject,
   removeUserFromProject,
   assignUserProject,
-  searchProject,
 } from "../../../redux/actions/getAllProject";
 import Swal from "sweetalert2";
 import Loading from "../../../_component/Loading/Loading";
@@ -14,6 +13,7 @@ import { Table, Input, Tag, Popover, Button, AutoComplete, Avatar } from "antd";
 import { EditOutlined, DeleteOutlined, ProfileOutlined } from "@ant-design/icons";
 import { getListUser, searchUser } from "../../../redux/actions/User";
 import { NavLink } from "react-router-dom";
+import { SEARCHPROJECT } from "../../../redux/types/Project";
 
 export default function Project() {
 
@@ -26,12 +26,11 @@ export default function Project() {
     dispatch(getListUser());
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
-  const { listProject, loading } = useSelector((state) => state.getAllProject_Reducer);
+  const { listProject, loading, keyword } = useSelector((state) => state.getAllProject_Reducer);
   const { listUser } = useSelector((state) => state.getListUser_Reducer);
 
-  const data = listProject
-
-  console.log(listProject)
+  const newArr = listProject?.filter(item => item.projectName.toLowerCase().indexOf(keyword.toLowerCase()) !== -1)
+  const data = newArr
 
   //TABLE
   const columns = [
@@ -210,7 +209,6 @@ export default function Project() {
     });
   };
 
-  //SEARCH PROJECT
   const { Search } = Input;
 
   return (
@@ -227,7 +225,7 @@ export default function Project() {
         allowClear
         enterButton="Search"
         size="large"
-        onSearch={value => dispatch(searchProject(value))}
+        onSearch={value => dispatch({ type: SEARCHPROJECT, value })}
       />
 
       <Table columns={columns} dataSource={data} bordered onChange={onChange} />

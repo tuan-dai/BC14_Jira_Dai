@@ -2,6 +2,7 @@ import * as ActionType from "../types/Project";
 const initialState = {
   loading: false,
   listProject: null,
+  keyword: '',
   error: null,
 };
 
@@ -55,7 +56,7 @@ const getAllProject_Reducer = (state = initialState, action) => {
     }
 
     case ActionType.SEARCHPROJECT: {
-      return { ...state, listProject: action.payload }
+      return { ...state, keyword: action.value }
     }
 
     default:
